@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Page2"
+             BackgroundColor="Black" 
+             >
+  <Label x:Name="MainLabel" Text="Hello" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+  <ListView x:Name="MainListView" HasUnevenRows="True">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Orientation="Vertical">
+            <Grid BackgroundColor="Blue" HeightRequest="10" />
+          <StackLayout Orientation="Vertical" Padding="20"  BackgroundColor="Purple">
+            <Label Text="{Binding Name}" Font="Large" />
+            <Label Text="{Binding Age}" />
+          </StackLayout>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+  
+</ContentPage>
